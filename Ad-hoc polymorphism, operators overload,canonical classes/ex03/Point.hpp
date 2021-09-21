@@ -11,7 +11,11 @@ class Point
 		~Point();
 		Point(const Point & point);
 		Point(const float &, const float &);
+
 		Point & operator=(const Point &);
+
+		float getX( void ) const;
+		float getY( void ) const;
 };
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
+bool bsp( Point const &, Point const &, Point const &, Point const &);

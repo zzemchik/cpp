@@ -5,39 +5,39 @@ const int Fixed::_exp = GiveExp();
 
 // OPERATORS
 
-Fixed & Fixed::operator=(const Fixed &cFixed)
+Fixed & Fixed::operator = (const Fixed &cFixed)
 {
 	if (this != &cFixed)
 		this->_raw = cFixed._raw;
 	return (*this);
 }
 
-std::ostream & operator<<(std::ostream& os, const Fixed & cFixed)
+std::ostream & operator << (std::ostream& os, const Fixed & cFixed)
 {
 	os << cFixed.toFloat();
 	return (os);
 }
 
-Fixed 	operator*(const Fixed & cFixed, const Fixed & cFixed2)
+Fixed 	operator * (const Fixed & cFixed, const Fixed & cFixed2)
 {
 	Fixed r(cFixed.toFloat() * cFixed2.toFloat());
 	return (r);
 }
 
-Fixed 	operator+(const Fixed & cFixed, const Fixed & cFixed2)
+Fixed 	operator + (const Fixed & cFixed, const Fixed & cFixed2)
 {
 	Fixed r(cFixed.toFloat() + cFixed2.toFloat());
 	return (r);
 }
 
-Fixed 	operator-(const Fixed & cFixed, const Fixed & cFixed2)
+Fixed 	operator - (const Fixed & cFixed, const Fixed & cFixed2)
 {
 	Fixed r(cFixed.toFloat() - cFixed2.toFloat());
 	return (r);
 }
 
 
-Fixed 	operator/(const Fixed & cFixed, const Fixed & cFixed2)
+Fixed 	operator / (const Fixed & cFixed, const Fixed & cFixed2)
 {
 	Fixed r;
 	if (cFixed.toFloat() == 0)
@@ -48,19 +48,19 @@ Fixed 	operator/(const Fixed & cFixed, const Fixed & cFixed2)
 	return (r);
 }
 
-Fixed & operator++(Fixed & cFixed)
+Fixed & operator ++ (Fixed & cFixed)
 {
 		cFixed._raw += 1;
 	return (cFixed);
 }
 
-Fixed & operator--(Fixed & cFixed)
+Fixed & operator -- (Fixed & cFixed)
 {
 		cFixed._raw -= 1;
 	return (cFixed);
 }
 
-Fixed & operator++(Fixed & cFixed, int i)
+Fixed & operator ++ (Fixed & cFixed, int i)
 {
 	i += 0;
 	Fixed &r(cFixed);
@@ -68,7 +68,7 @@ Fixed & operator++(Fixed & cFixed, int i)
 	return (r);
 }
 
-Fixed & operator--(Fixed & cFixed, int i)
+Fixed & operator -- (Fixed & cFixed, int i)
 {
 	i += 0;
 	Fixed &r(cFixed);
@@ -76,48 +76,48 @@ Fixed & operator--(Fixed & cFixed, int i)
 	return (r);
 }
 
-bool operator<(const Fixed & cFixed, const Fixed & cFixed1)
+bool operator < (const Fixed & cFixed, const Fixed & cFixed1)
 {
 	if (cFixed.toFloat() < cFixed1.toFloat())
 		return (true);
 	return (false);
 }
 
-bool Fixed::operator>(const Fixed & cFixed)
+bool Fixed::operator > (const Fixed & cFixed)
 {
 	if (this->_raw > cFixed._raw)
 		return (true);
 	return (false);
 }
 
-bool Fixed::operator<(const Fixed & cFixed)
+bool Fixed::operator < (const Fixed & cFixed)
 {
 	if (this->_raw < cFixed._raw)
 		return (true);
 	return (false);
 }
 
-bool Fixed::operator<=(const Fixed & cFixed)
+bool Fixed::operator <= (const Fixed & cFixed)
 {
 	if (this->_raw <= cFixed._raw)
 		return (true);
 	return (false);
 }
 
-bool Fixed::operator>=(const Fixed & cFixed)
+bool Fixed::operator >= (const Fixed & cFixed)
 {
 	if (this->_raw >= cFixed._raw)
 		return (true);
 	return (false);
 }
 
-bool Fixed::operator==(const Fixed & cFixed)
+bool Fixed::operator == (const Fixed & cFixed)
 {
 	if (this->_raw == cFixed._raw)
 		return (true);
 	return (false);
 }
-bool Fixed::operator!=(const Fixed & cFixed)
+bool Fixed::operator != (const Fixed & cFixed)
 {
 	if (this->_raw != cFixed._raw)
 		return (true);
@@ -162,16 +162,6 @@ const Fixed  &Fixed::min(const Fixed & a, const Fixed & b)
 	if (a < b)
 		return(a);
 	return (b);
-}
-
-int 	Fixed::getRawBits()	 const
-{
-	return(_raw >> _number_bit);
-}
-
-void	Fixed::setRawBits (int const raw)
-{
-	_raw = raw * _exp;
 }
 
 float 	Fixed::toFloat() const

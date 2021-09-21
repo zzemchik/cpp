@@ -1,7 +1,7 @@
 NAME = main
 HEADERS = Fixed.hpp Point.hpp
 
-SORCES = main.cpp Fixed.cpp Point.cpp
+SORCES = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 CC = clang++
 

@@ -41,18 +41,6 @@ Fixed::Fixed(const Fixed &cFixed)
 	*this = cFixed; 
 }
 
-
-int 	Fixed::getRawBits()	 const
-{
-	std::cout << "getRawBits member function called" << std::endl;
-	return(_raw);
-}
-
-void	Fixed::setRawBits (int const raw)
-{
-	_raw = raw;
-}
-
 float 	Fixed::toFloat() const
 {
 	return (static_cast<float>(_raw) / _exp);
@@ -63,7 +51,7 @@ int 	Fixed::toInt() const
 	return(_raw >> _number_bit);
 }
 
-const int Fixed::GiveExp()
+int Fixed::GiveExp()
 {
 	int num;
 

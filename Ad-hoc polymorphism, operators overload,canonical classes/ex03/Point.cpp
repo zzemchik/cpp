@@ -4,9 +4,25 @@
 	Point::Point(const float & x, const float & y) : _x(x), _y(y) {}
 	Point::Point(const Point & point) { *this = point; }
 	Point::~Point() {}
-	Point & Point::operator=(const Point &point)
+
+
+	float Point::getX() const 
+	{ 
+		return (this->_x.toFloat()); 
+	}
+
+	float Point::getY() const 
+	{ 
+		return (this->_y.toFloat()); 
+	}
+
+	Point & Point::operator=(const Point &point) 
 	{
-		this->~Point();
-		*this = point;
+
+		if (this != &point)
+		{
+			this->~Point();
+			*this = point;
+		}
 		return (*this);
 	}

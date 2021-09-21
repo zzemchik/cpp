@@ -20,8 +20,6 @@ class Fixed
 		Fixed(const float);
 		Fixed(const int);
 
-		int 					getRawBits() const;
-		void					setRawBits (int const raw);
 		float 					toFloat( void ) const;
 		int 					toInt( void ) const;
 		

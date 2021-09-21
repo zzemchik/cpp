@@ -164,16 +164,6 @@ const Fixed  &Fixed::min(const Fixed & a, const Fixed & b)
 	return (b);
 }
 
-int 	Fixed::getRawBits()	 const
-{
-	return(_raw >> _number_bit);
-}
-
-void	Fixed::setRawBits (int const raw)
-{
-	_raw = raw * _exp;
-}
-
 float 	Fixed::toFloat() const
 {
 	return (static_cast<float>(_raw) / _exp);

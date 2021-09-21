@@ -8,7 +8,7 @@ class Fixed
 		int _raw;
 		static const int _number_bit;
 		static const int _exp;
-		static const int GiveExp();
+		static int GiveExp();
 	public:
 
 		Fixed();
@@ -18,8 +18,6 @@ class Fixed
 		Fixed(const int);
 
 		Fixed 					&operator=(const Fixed &);
-		int 					getRawBits() const;
-		void					setRawBits (int const raw);
 		float 					toFloat( void ) const;
 		int 					toInt( void ) const;
 		friend std::ostream& 	operator<<(std::ostream& os, const Fixed & cFixed);
