@@ -10,8 +10,6 @@ float getVector(const Point &a, const Point &b, const Point &p)
 	return (abx * apy - aby * apx);
 }
 
-
-
 bool bsp( Point const & a, Point const & b, Point const & c, Point const & point)
 {
 	

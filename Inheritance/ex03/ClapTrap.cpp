@@ -63,3 +63,10 @@
 		
 	}
 	
+
+	void ClapTrap::printParam( void )
+	{
+		std::cout << "name: " << _name << " hp " << _health << " energy " << _energy;
+		std::cout << " attack " << _attackDamage << std::endl;
+	}
+	

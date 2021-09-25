@@ -1,6 +1,5 @@
 #include "Point.hpp"
 #include <iomanip>  
-
 int main ()
 {
 	{

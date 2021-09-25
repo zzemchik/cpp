@@ -1,14 +1,15 @@
 #include "ScavTrap.hpp"
 
-	ScavTrap::ScavTrap(const std::string & name) : ClapTrap(name, 100, 100, 30)
+	ScavTrap::ScavTrap(const std::string & name) : ClapTrap(name, 100, 50, 20)
 	{
 		std::cout << "Call constructor name(ScavTrap)" << std::endl;
+
 	}
 
-	ScavTrap::ScavTrap() : ClapTrap("defolt bob2", 100, 100, 30)
+	ScavTrap::ScavTrap() : ClapTrap("defolt bob", 100, 50, 20)
 	{
-		_energy = 100;
-		std::cout << "Call defolt constructor name(ScavTrap)" << std::endl;
+		std::cout << "Call constructor name(ScavTrap)" << std::endl;
+
 	}
 
 	ScavTrap::ScavTrap(const ScavTrap & scav)
@@ -42,5 +43,3 @@
 	{
 		std::cout << ClapTrap::_name << "  have enterred in Gate keeper mode" << std::endl;
 	}
-
-

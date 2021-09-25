@@ -1,15 +1,17 @@
 #include "ScavTrap.hpp"
+#include "FlagTrap.hpp"
 
 int main()
 {
-	// ClapTrap a("bib");
+
 	ScavTrap c("max");
+	FlagTrap f("bob");
 	// ClapTrap c( b );
 	// ClapTrap d;
 	// d = a;
+	f.attack("pip");
 	c.attack("bib");
-	c.ClapTrap::attack("bib");
-	// a.attack("bob");
+	f.highFivesGuys();
 	c.takeDamage(20);
 	c.beRepaired(10);
 	c.guardGate();

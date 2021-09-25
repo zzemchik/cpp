@@ -1,7 +1,7 @@
 NAME = main
 HEADERS = ClapTrap.hpp
 
-SORCES = main.cpp ClapTrap.cpp ScavTrap.cpp
+SORCES = main.cpp ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp DiamondTrap.cpp
 
 CC = clang++
 
