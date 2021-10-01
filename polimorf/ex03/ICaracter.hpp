@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
-#include "Amateria.hpp"
+
+class Amateria;
 
 class ICharacter
 {
@@ -11,3 +12,5 @@ class ICharacter
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter & target) = 0;
 };
+
+#include "Amateria.hpp"

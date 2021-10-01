@@ -2,14 +2,15 @@
 #include "Amateria.hpp"
 #include "IMateriaSource.hpp"
 
-class MateriaSource : IMateriaSource
+class MateriaSource : public IMateriaSource
 {
 	private:
 		Amateria *_materia[4];
-		int _index;
 	public:
 		MateriaSource();
-		~MateriaSource();
+		MateriaSource(const MateriaSource &);
+		MateriaSource & operator =(const MateriaSource &);
 		void learnMateria(Amateria * );
 		Amateria * createMateria(std::string const & type);
+		~MateriaSource();
 };
