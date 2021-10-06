@@ -5,13 +5,17 @@ class Brain
 {
 	private:
 		std::string _ideas[100];
-		static int _iter;
+		int 		_iter;
 	public:
 		Brain();
 		Brain(const Brain &);
 		Brain & operator = (const Brain &);
-		std::string getOneIdea(const int & iter) const;
-		void setIdea(std::string);
-		~Brain();
+
+		std::string 	getOneIdea(const int & iter) const;
+		int				getCountIdea( void ) const;
+		void 			setIdea(const std::string &);
+		void			freeIdeas( void );
+
+		virtual 		~Brain();
 	
 };
