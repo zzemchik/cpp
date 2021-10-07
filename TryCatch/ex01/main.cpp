@@ -6,25 +6,6 @@ int main ()
 {
 	Bureaucrat *f;
 	Form *form;
-	// try
-	// {
-	// 	f = new Bureaucrat("bob", 156);
-	// 	std::cout << *f << std::endl;
-	// }
-	// catch (std::exception & ex) 
-	// {
-	// 	std::cout << ex.what() << std::endl; 
-	// }
-
-	// try 
-	// {
-	// 	f = new Bureaucrat("bob", -7);
-	// 	std::cout << *f << std::endl;
-	// }
-	// catch (std::exception & ex)
-	// {
-	// 	std::cout << ex.what() << std::endl;
-	// }
 
 	try 
 	{
@@ -35,6 +16,7 @@ int main ()
 		// std::cout << *form << std::endl;
 		delete f;
 	}
+	
 	catch (std::exception & ex)
 	{
 		std::cout << ex.what() << std::endl;
@@ -42,7 +24,7 @@ int main ()
 
 	try 
 	{
-		f = new Bureaucrat("bob", 146);
+		f = new Bureaucrat("bob", 140);
 		form = new Form("q", 145, 149);
 		// std::cout << *form << std::endl;
 		form->beSigned(*f);
@@ -53,14 +35,6 @@ int main ()
 	{
 		std::cout << ex.what() << std::endl;
 	}
-	// try 
-	// {
-	// 	f = new Bureaucrat("bob", 144);
-	// 	std::cout << *f << std::endl;
-	// }
-	// catch (std::exception & ex)
-	// {
-	// 	std::cout << ex.what() << std::endl;
-	// }
+
 	
 }
