@@ -8,8 +8,8 @@
 
 	FlagTrap::FlagTrap() : ClapTrap("defolt bob1", 100, 50, 20)
 	{
-		_attackDamage = 20;
-		_health = 100;
+		// _attackDamage = 2;
+		// _health = 1;
 		std::cout << "Call defolt constructor name(FlagTrap)" << std::endl;
 	}
 

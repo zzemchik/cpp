@@ -8,8 +8,9 @@
 	}
 	
 	ClapTrap::ClapTrap(const std::string & name) : \
-	_name(name), _health(10), _energy(10), _attackDamage(0) 
+	_name(name), _health(10), _energy(10), _attackDamage(0)
 	{
+		
 		std::cout << "Call constructor name(ClapTrap)" << std::endl;
 	}
 

@@ -7,7 +7,7 @@
 
 	ScavTrap::ScavTrap() : ClapTrap("defolt bob2", 100, 100, 30)
 	{
-		_energy = 100;
+		// _energy = 3;
 		std::cout << "Call defolt constructor name(ScavTrap)" << std::endl;
 	}
 
