@@ -1,8 +1,5 @@
 #include "ParsNum.hpp"
 
-
-// Private function
-
 void 	ParsNum::CastChar( void )
 {
 	
@@ -64,13 +61,13 @@ int	ParsNum::checkStr( void )
 		return 1;
 	if (_strCast == "nanf" || _strCast == "-inff" || _strCast == "+inff" )
 		return 2;
-	for (int i = 0; i < _strCast.size(); i++)
+	for (unsigned long i = 0; i < _strCast.size(); i++)
 		if (!(_strCast[i] >= '0' && _strCast[i] <= '9'))
 			if (!(_strCast[i] == '.' || _strCast[i] == 'f'))
 				return -1;
-	if (_strCast.find("f") != -1 && (_strCast.find("f") != _strCast.rfind("f") ||  _strCast.find("f") + 1 != _strCast.size()))
+	if (static_cast<int>(_strCast.find("f")) != -1 && (_strCast.find("f") != _strCast.rfind("f") ||  _strCast.find("f") + 1 != _strCast.size()))
 		return -1;
-	if (_strCast.find(".") != -1 && (_strCast.find(".") != _strCast.rfind(".") ||  _strCast.find(".") == 0))
+	if (static_cast<int>(_strCast.find(".")) != -1 && (_strCast.find(".") != _strCast.rfind(".") ||  _strCast.find(".") == 0))
 		return -1;
 	return (0);
 }
