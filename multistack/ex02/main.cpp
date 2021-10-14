@@ -23,5 +23,18 @@ int main()
     ++it;
     }
     std::stack<int> s(mstack);
+    
+    {
+        MutantStack<std::string> ms;
+        ms.push("sdf");
+        ms.push("zv");
+        MutantStack<std::string>::iterator it = ms.begin();
+        MutantStack<std::string>::iterator ite = ms.end();
+        while (it != ite)
+        {
+        std::cout << *it << std::endl;
+        ++it;
+        }
+    }
     return 0;
 }
